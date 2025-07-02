@@ -1,6 +1,6 @@
 CreateThread(function()
     if OV_GIT_NAME == nil then
-        print("^1Could not find OV_GIT_NAME to check version.")
+        print("^1Could not find OV_GIT_NAME to check version.^0")
         return
     end
 
@@ -20,15 +20,15 @@ CreateThread(function()
                 responseText = responseText:match("^%s*(.-)%s*$")
 
                 if responseText == local_version then
-                    print(string.format("^4Version %s\n^2You are running on the latest version", local_version))
+                    print(string.format("^4Version %s\n^2You are running on the latest version.^0", local_version))
                 else
-                    print(string.format("^4Version %s\n^1You are currently running an outdated version, please update to version %s", local_version, responseText))
+                    print(string.format("^4Version %s\n^1You are currently running an outdated version, please update to version %s.^0", local_version, responseText))
                 end
             else
-                print("^1Failed to retrieve version from URL.")
+                print("^1Failed to retrieve version from URL.^0")
             end
         end, 'GET')
     else
-        print("1Could not find version in fxmanifest.lua file. Is everything up to date?")
+        print("1Could not find version in fxmanifest.lua file. Is everything up to date?^0")
     end
 end)
