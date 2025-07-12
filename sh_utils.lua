@@ -1,5 +1,5 @@
 --[[
-# Utils Version 1.1.6
+# Utils Version 1.1.7
 
 # Add Sub module to your project
 git submodule add https://github.com/Ovara-Service/ov_utils.git ov_shared
@@ -126,7 +126,7 @@ function isDebug()
 		return getConfig("debug")
 	end
 
-	return Config.debug
+	return GetConvar("debug_" .. tostring(GetCurrentResourceName()), "false") == "true" and true or false
 end
 
 function debugPrint(msg)
