@@ -1,5 +1,5 @@
 --[[
-# Utils Version 1.1.7
+# Utils Version 1.2.0
 
 # Add Sub module to your project
 git submodule add https://github.com/Ovara-Service/ov_utils.git ov_shared
