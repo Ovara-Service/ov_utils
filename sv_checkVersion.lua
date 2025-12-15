@@ -1,3 +1,5 @@
+NEWER_VERSION_AVAILABLE = false
+
 CreateThread(function()
     if OV_GIT_NAME == nil then
         print("^1Could not find OV_GIT_NAME to check version.^0")
@@ -22,6 +24,7 @@ CreateThread(function()
                 if responseText == local_version then
                     print(string.format("^4Version %s\n^2You are running on the latest version.^0", local_version))
                 else
+					NEWER_VERSION_AVAILABLE = true
                     print(string.format("^4Version %s\n^1You are currently running an outdated version, please update to version %s.^0", local_version, responseText))
                 end
             else
