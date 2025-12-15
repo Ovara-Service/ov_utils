@@ -1,4 +1,5 @@
 NEWER_VERSION_AVAILABLE = false
+NEWER_VERSION_NAME = "Unknown"
 
 CreateThread(function()
     if OV_GIT_NAME == nil then
@@ -20,6 +21,8 @@ CreateThread(function()
         PerformHttpRequest(url, function(statusCode, responseText, headers)
             if statusCode == 200 then
                 responseText = responseText:match("^%s*(.-)%s*$")
+
+				NEWER_VERSION_NAME = responseText
 
                 if responseText == local_version then
                     print(string.format("^4Version %s\n^2You are running on the latest version.^0", local_version))
