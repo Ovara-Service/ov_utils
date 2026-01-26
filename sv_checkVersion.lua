@@ -18,6 +18,11 @@ CreateThread(function()
     local local_version = getVersion()
 
     if local_version then
+        if string.match(local_version, "Beta$") then
+            print(string.format("^4Version %s\n^3This is a Beta version. Please note that errors may occur.^0", local_version))
+            return
+        end
+
         PerformHttpRequest(url, function(statusCode, responseText, headers)
             if statusCode == 200 then
                 responseText = responseText:match("^%s*(.-)%s*$")
