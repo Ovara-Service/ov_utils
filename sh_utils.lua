@@ -49,8 +49,10 @@ _LOCALE = _LOCALE or {}
 -- [Shared] Replaces default placeholders like {serverName}, {discordUrl}, etc. in a message.
 function replaceDefaultKeys(message)
 	if message ~= nil then
-		message = message:gsub("{serverName}", tostring(GetConvar("serverName", "ServerName")), 1)
-		message = message:gsub("{serverLogo}", tostring(GetConvar("serverLogo", "https://www.floba-media.de/wp-content/uploads/2025/02/ovara_logo.png")), 1)
+		if OV_DESIGN_DATA then
+			message = message:gsub("{serverName}", tostring(getDesignConfig("serverName")), 1)
+			message = message:gsub("{serverLogo}", tostring(getDesignConfig("serverLogo")), 1)
+		end
 		message = message:gsub("{discordUrl}", tostring(GetConvar("discordUrl", "discordUrl")), 1)
 		message = message:gsub("{website}", tostring(GetConvar("website", "website")), 1)
 	end
