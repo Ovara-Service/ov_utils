@@ -1,5 +1,5 @@
 --[[
-# Utils Version 1.2.1
+# Utils Version 1.2.2
 
 # Add Sub module to your project
 git submodule add https://github.com/Ovara-Service/ov_utils.git ov_shared
@@ -9,6 +9,11 @@ git submodule add https://github.com/Ovara-Service/ov_utils.git ov_shared
 -- [Shared] Reads a value from the global OV_CONFIG_DATA (context-dependent fallback).
 function getConfig(...)
 	return getConfigValue(OV_CONFIG_DATA, ...)
+end
+
+-- [Shared] Reads a value from the global OV_DESIGN_DATA.
+function getDesignConfig(...)
+	return getConfigValue(OV_DESIGN_DATA, "themeDesign", ...)
 end
 
 -- [Shared] Retrieves a nested config value using a path (key chain).
