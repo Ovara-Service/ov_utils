@@ -11,9 +11,14 @@ function getConfig(...)
 	return getConfigValue(OV_CONFIG_DATA, ...)
 end
 
--- [Shared] Reads a value from the global OV_DESIGN_DATA.
+-- [Shared] Reads a value from the global OV_DESIGN_DATA in themeDesign.
 function getDesignConfig(...)
 	return getConfigValue(OV_DESIGN_DATA, "themeDesign", ...)
+end
+
+-- [Shared] Reads a value from the global OV_DESIGN_DATA.
+function getDesignConfigRaw(...)
+	return getConfigValue(OV_DESIGN_DATA, ...)
 end
 
 -- [Shared] Retrieves a nested config value using a path (key chain).
