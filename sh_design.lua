@@ -21,12 +21,12 @@ DefaultDesignConfiguration = {
             ["box-premium-color"] = "#ffb000"
         }
     },
-    ["servername"] = {
+    ["serverName"] = {
         client = true,
         description = "Server name.",
         value = "Ovara.gg"
     },
-    ["serverlogo"] = {
+    ["serverLogo"] = {
         client = true,
         description = "Server logo url.",
         value = "https://www.floba-media.de/wp-content/uploads/2023/08/cropped-FloBa-Media-01.png"
@@ -59,12 +59,12 @@ Citizen.CreateThread(function()
         if OV_DESIGN.getVersion() < 2 then
             -- Add Servername and logo
 
-            OV_CONFIG_DATA["servername"] = {
+            OV_CONFIG_DATA["serverName"] = {
                 client = true,
                 description = "Server name.",
                 value = "Ovara.gg"
             }
-            OV_CONFIG_DATA["serverlogo"] = {
+            OV_CONFIG_DATA["serverLogo"] = {
                 client = true,
                 description = "Server logo url.",
                 value = "https://www.floba-media.de/wp-content/uploads/2023/08/cropped-FloBa-Media-01.png"
