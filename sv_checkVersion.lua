@@ -1,3 +1,7 @@
+--[[
+# Version 1.1.0
+]]--
+
 NEWER_VERSION_AVAILABLE = false
 NEWER_VERSION_NAME = "Unknown"
 
