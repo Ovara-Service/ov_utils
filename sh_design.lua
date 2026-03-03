@@ -59,18 +59,18 @@ Citizen.CreateThread(function()
         if OV_DESIGN.getVersion() < 2 then
             -- Add Servername and logo
 
-            OV_CONFIG_DATA["serverName"] = {
+            OV_DESIGN_DATA["serverName"] = {
                 client = true,
                 description = "Server name.",
                 value = "Ovara.gg"
             }
-            OV_CONFIG_DATA["serverLogo"] = {
+            OV_DESIGN_DATA["serverLogo"] = {
                 client = true,
                 description = "Server logo url.",
                 value = "https://www.floba-media.de/wp-content/uploads/2023/08/cropped-FloBa-Media-01.png"
             }
 
-            exports["ov_configs"]:saveConfig(CONFIG_NAME, OV_CONFIG_DATA, 2)
+            exports["ov_configs"]:saveConfig(DESIGN_CONFIG_NAME, OV_DESIGN_DATA, 2)
         end
     end
 end)
