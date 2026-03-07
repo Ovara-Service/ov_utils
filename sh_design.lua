@@ -84,6 +84,7 @@ AddEventHandler("ov_configs:reloadConfig", function(configName)
             print("Successfully reloaded design configuration.")
             if setDesignConfig then
                 setDesignConfig(getDesignConfig())
+                print("Applied design configuration.")
             end
         else
             print("Successfully reloaded design configuration.")
