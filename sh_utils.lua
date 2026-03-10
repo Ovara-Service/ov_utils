@@ -1,5 +1,5 @@
 --[[
-# Utils Version 1.2.2
+# Ovara Utils Version 1.2.3
 
 # Add Sub module to your project
 git submodule add https://github.com/Ovara-Service/ov_utils.git ov_shared
@@ -55,8 +55,8 @@ _LOCALE = _LOCALE or {}
 function replaceDefaultKeys(message)
 	if message ~= nil then
 		if OV_DESIGN_DATA then
-			message = message:gsub("{serverName}", tostring(getDesignConfig("serverName")), 1)
-			message = message:gsub("{serverLogo}", tostring(getDesignConfig("serverLogo")), 1)
+			message = message:gsub("{serverName}", tostring(getDesignConfigRaw("serverName")), 1)
+			message = message:gsub("{serverLogo}", tostring(getDesignConfigRaw("serverLogo")), 1)
 		end
 		message = message:gsub("{discordUrl}", tostring(GetConvar("discordUrl", "discordUrl")), 1)
 		message = message:gsub("{website}", tostring(GetConvar("website", "website")), 1)
